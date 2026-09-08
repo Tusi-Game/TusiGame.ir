@@ -1,0 +1,21 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tusigame-ir:latest
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - dokploy-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.tusigame.rule=Host(`tusigame.ir`) || Host(`www.tusigame.ir`)"
+      - "traefik.http.routers.tusigame.entrypoints=websecure"
+      - "traefik.http.routers.tusigame.tls.certresolver=letsencrypt"
+      - "traefik.http.services.tusigame.loadbalancer.server.port=80"
+
+networks:
+  dokploy-network:
+    external: true
