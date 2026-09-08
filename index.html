@@ -21,8 +21,7 @@
   body {
     margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     background: #404042;
     color: #f2f2f2;
     font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
@@ -30,19 +29,33 @@
   }
 
   main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1.75rem;
     padding: 2rem;
     text-align: center;
     animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
-  img {
+  main img {
     width: clamp(150px, 34vmin, 260px);
     height: auto;
     display: block;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem 1.5rem;
+  }
+
+  footer img {
+    display: block;
+    width: auto;
+    max-height: 78px;
   }
 
   h1 {
@@ -68,5 +81,8 @@
     <img src="logo.png" alt="Tusi Game logo" width="512" height="512">
     <h1>Tusi Game</h1>
   </main>
+  <footer>
+    <a referrerpolicy="origin" target="_blank" rel="noopener" href="https://trustseal.enamad.ir/?id=7662765&Code=BT5Rqr2JrdpHl5HkEjVWq86Tm05qHHCF"><img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=7662765&Code=BT5Rqr2JrdpHl5HkEjVWq86Tm05qHHCF" alt="Enamad electronic trust seal" style="cursor:pointer" code="BT5Rqr2JrdpHl5HkEjVWq86Tm05qHHCF"></a>
+  </footer>
 </body>
 </html>
