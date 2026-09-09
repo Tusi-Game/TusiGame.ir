@@ -40,10 +40,60 @@
     animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
-  main img {
+  main > img {
     width: clamp(150px, 34vmin, 260px);
     height: auto;
     display: block;
+  }
+
+  .game-link {
+    width: min(100%, 396px);
+    color: #f2f2f2;
+    text-decoration: none;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.12);
+    background: #1a1030;
+    font-family: Tahoma, Arial, sans-serif;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  }
+
+  .game-link:hover {
+    border-color: #c797ff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(100,50,200,0.35);
+  }
+  .game-link:focus-visible { outline: 3px solid #c797ff; outline-offset: 5px; }
+
+  .game-banner-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 396 / 133;
+    object-fit: cover;
+    display: block;
+  }
+
+  .play-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 16px;
+    font-size: 17px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #2d1b69, #1a1030);
+    text-align: center;
+  }
+
+  .play-label .play-icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 12px;
+    border-color: transparent transparent transparent #95d611;
+    flex-shrink: 0;
   }
 
   footer {
@@ -73,6 +123,8 @@
 
   @media (prefers-reduced-motion: reduce) {
     main { animation: none; }
+    .game-link { transition: none; }
+    .game-link:hover { transform: none; }
   }
 </style>
 </head>
@@ -80,6 +132,10 @@
   <main>
     <img src="logo.png" alt="Tusi Game logo" width="512" height="512">
     <h1>Tusi Game</h1>
+    <a class="game-link" href="https://bparty.tusigame.ir/" lang="fa" dir="rtl">
+      <img class="game-banner-img" src="bparty-banner.png" alt="" width="704" height="1520">
+      <span class="play-label"><span class="play-icon" aria-hidden="true"></span> اسم فامیل آنلاین</span>
+    </a>
   </main>
   <footer>
     <a referrerpolicy="origin" target="_blank" rel="noopener" href="https://trustseal.enamad.ir/?id=7662765&Code=BT5Rqr2JrdpHl5HkEjVWq86Tm05qHHCF"><img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=7662765&Code=BT5Rqr2JrdpHl5HkEjVWq86Tm05qHHCF" alt="Enamad electronic trust seal" style="cursor:pointer" code="BT5Rqr2JrdpHl5HkEjVWq86Tm05qHHCF"></a>
