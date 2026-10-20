@@ -61,10 +61,19 @@
     color: #ffffff;
   }
 
-  /* ── game card ── */
+  /* ── game cards ── */
+  .games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
   .game-link {
     display: block;
-    width: min(100%, 380px);
+    flex: 1 1 260px;
+    max-width: 380px;
     color: #e8e8ec;
     text-decoration: none;
     border-radius: 18px;
@@ -140,14 +149,16 @@
   <main>
     <img class="logo" src="logo-transparent.png" alt="توسی‌گیم" width="512" height="512">
     <h1>توسی‌گیم</h1>
-    <a class="game-link" href="https://bparty.tusigame.ir/">
-      <img class="game-banner-img" src="bparty-banner.png?v=2" alt="اسم فامیل آنلاین" width="2400" height="1350">
-      <span class="play-label"><span class="play-icon" aria-hidden="true"></span> اسم فامیل آنلاین</span>
-    </a>
-    <a class="game-link" href="https://ble.ir/morafe_bot">
-      <img class="game-banner-img" src="morafe-banner.png" alt="بازی آنلاین مُرافه" width="640" height="360">
-      <span class="play-label"><span class="play-icon" aria-hidden="true"></span> بازی آنلاین مُرافه</span>
-    </a>
+    <div class="games">
+      <a class="game-link" href="https://bparty.tusigame.ir/">
+        <img class="game-banner-img" src="bparty-banner.png?v=2" alt="اسم فامیل آنلاین" width="2400" height="1350">
+        <span class="play-label"><span class="play-icon" aria-hidden="true"></span> اسم فامیل آنلاین</span>
+      </a>
+      <a class="game-link" href="https://ble.ir/morafe_bot">
+        <img class="game-banner-img" src="morafe-banner.png" alt="بازی آنلاین مُرافه" width="640" height="360">
+        <span class="play-label"><span class="play-icon" aria-hidden="true"></span> بازی آنلاین مُرافه</span>
+      </a>
+    </div>
   </main>
   <footer>
     <a referrerpolicy="origin" target="_blank" rel="noopener" href="https://trustseal.enamad.ir/?id=7662765&Code=BT5Rqr2JrdpHl5HkEjVWq86Tm05qHHCF"><img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=7662765&Code=BT5Rqr2JrdpHl5HkEjVWq86Tm05qHHCF" alt="Enamad electronic trust seal" style="cursor:pointer" code="BT5Rqr2JrdpHl5HkEjVWq86Tm05qHHCF"></a>
